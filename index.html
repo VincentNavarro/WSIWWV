@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:100|Work+Sans:400|Lato:300,300italic,400,400italic" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="js/weather.js"></script>
+
+</head>
+
+<body>
+
+   <!-- Page shows celcius and fahrenheit option -->
+   <div class="wrap">
+      <div id="headWrap">
+         <h1>WHAT SHOULD I WEAR?</h1>
+         <h2>A nice little tool to tell you what you should wear today based on the weather.</h2>
+         <hr>
+
+         <div class="buttWrap">
+            <input class="zipCode" placeholder="Enter your zip code here and select Celcius or Fahrenheit" type="text"></input>
+            <button class="temp" id="cel">°C</button>
+            <button class="temp" id="fah">°F</button>
+         </div>
+      </div>
+
+      <div id="tempDisplay"></div>
+
+      <div id="reccDisplay"></div>
+
+
+   </div>
+
+</body>
+
+
+</html>

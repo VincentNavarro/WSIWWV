@@ -1,0 +1,183 @@
+
+/* Variables */
+:root{
+/* Colors variables */
+--nightBlue: #2C303B;
+--midnightBlue: #161c2b;
+--ghostWhite:  #f8f8ff;
+  --eggPlant: #BCE3C5;
+
+/*RGB color variables*/
+  --nightBlueRGB: rgb(44,48,59);
+  --midnightBlueRGB: rgb(22,28,43);
+  --ghostWhiteRGB:  rgb(248,248,255);
+
+
+/* Font type variables */
+  --workSans: 'Work Sans', sans-serif;
+  --openSans: 'Open Sans', sans-serif;
+  --Lato: 'Lato';
+
+/* Font size variables CHANGES WITH SCREEN SIZE*/
+  --title: 5vw;
+  --caption: 1vw;
+  --tempSize: 3.5vw;
+  --reccSize: 3vw;
+}
+
+*{
+   padding: 0;
+   margin: 0;
+   /*width: 100%;*/
+     box-sizing: border-box;
+}
+
+body{
+   background-color: var(--midnightBlue);
+}
+
+/*outer wrap that centers everything nicely*/
+.wrap{
+   position: absolute;
+   width: 100%;
+   top: 15%;
+   text-align: center;
+}
+
+h1{
+   font-family: var(--openSans);
+   font-weight: 400;
+   font-size: var(--title);
+   color: var(--ghostWhite);
+}
+
+h2{
+   font-family: var(--workSans);
+   font-weight: 400;
+   font-size: var(--caption);
+   color: var(--ghostWhite);
+}
+
+hr{
+   position: relative;
+   left: 37.5%;
+   width: 25%;
+   margin-top: 1%;
+}
+
+
+/*wrap for the buttons*/
+.buttWrap{
+   position: relative;
+   padding-top: 2%;
+   width: 100%;
+   text-align: center;
+   margin: 0;
+}
+
+/*handles both celcius and fahrenheit buttons*/
+.temp{
+   font-family: var(--workSans);
+   font-size: 1.5vw;
+   display:inline block;
+   text-decoration: none;
+   cursor: pointer;
+   color: var(--ghostWhite);
+   background-color: var(--midnightBlue);
+   border: 1px solid var(--ghostWhite);
+   transition:all 0.5s ease;
+   border-radius: 3px;
+   margin: 0 -10px 0 0 !important;
+   width: 9%;
+   vertical-align: bottom;
+   height: 50px
+}
+
+.temp#fah{
+   background: linear-gradient(to left, var(--midnightBlue) 50%, var(--ghostWhite) 50%);
+   background-size: 200% 200%;
+   background-position:right;
+}
+
+.temp#fah:hover{
+   color: var(--midnightBlue);
+   background-position:left;
+   opacity: 1;
+}
+
+.temp#cel{
+   background: linear-gradient(to right, var(--midnightBlue) 50%, var(--ghostWhite) 50%);
+   background-size: 200% 200%;
+   background-position:left;
+}
+
+.temp#cel:hover{
+   color: var(--midnightBlue);
+   background-position:right;
+   opacity: 1;
+}
+
+
+/*input area for zipcode*/
+.buttWrap input {
+   display:inline-block;
+   vertical-align: bottom;
+   font-family: var(--workSans);
+   margin: 0 0 0 0 !important;
+   background-image: none;
+   outline: 0;
+   -webkit-box-shadow: rgba(255, 255, 255, 0) !important;
+   box-shadow: rgba(255, 255, 255, 0) !important;
+   border-top: 1px solid var(--ghostWhite) !important;
+   border-right: 1px solid var(--ghostWhite) !important;
+   border-left: 1px solid var(--ghostWhite) !important;
+   border-bottom: 1px solid var(--ghostWhite) !important;
+   background-color: var(--midnightBlue);
+   border-radius: 3px !important;
+   height: 50px !important;
+   font-size: 20px;
+   color: rgb(91,57,48);  /* change [input cursor color] by this*/
+   text-shadow: 0px 0px 0px var(--ghostWhiteRGB); /* change [input font] by this*/
+   -webkit-text-fill-color: transparent;
+   padding: 0 0 0 10px !important;
+   width: 50%;
+}
+
+.buttWrap input:hover, .buttWrap input:focus {
+   background-color: var(--ghostWhiteRGB) !important;
+   color: var(--midnightBlue);  /* change [input cursor color] by this*/
+   text-shadow: 0px 0px 0px var(--midnightBlue); /* change [input font] by this*/
+}
+
+.buttWrap input:required, .buttWrap input:invalid {
+    box-shadow:none !important;
+}
+
+/*display for the temperature*/
+#tempDisplay{
+   font-family: var(--Lato);
+   font-weight: 400;
+   padding: 2% 0 5% 0;
+   font-size: var(--tempSize);
+   color: var(--ghostWhite);
+   letter-spacing: -.05em;
+}
+
+#reccDisplay{
+   font-family: var(--Lato);
+   font-weight: 400;
+   transition: color 2s;
+   font-size: var(--reccSize);
+   color: var(--ghostWhite);
+
+}
+
+span.clotheText{
+   color: var(--eggPlant);
+   font-weight: 400;
+}
+
+span.tempText{
+   color: var(--eggPlant);
+   font-weight: 400;
+}
